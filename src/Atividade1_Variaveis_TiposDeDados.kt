@@ -10,5 +10,6 @@
     // Declarar uma variavel com o numero da populacao nele
     val popBr: Int = 211000000
 
+    // Retornar o valor do PIB per Capita com as variaveis declaradas anteriormente
     println("O Valor do PIB per Capita é: ${numeroPIB / popBr}")
 }
