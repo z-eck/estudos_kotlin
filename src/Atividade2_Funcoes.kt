@@ -1,5 +1,5 @@
 fun main(){
-    //anoParaTudo()
+    anoParaTudo()
     //retornarQuantidadeDeCaracteres()
     //calculoCubo()
     //milhasParaKm()
@@ -7,7 +7,7 @@ fun main(){
 }
 
 //1) Escreva uma função que seja capaz de receber a quantidade de anos e transformar em meses, dias, horas, minutos e segundos.
-fun anoParaTudo(){
+private fun anoParaTudo(){
     print("Por favor, informe o ano (número inteiro, de preferência): ")
     var linha = readLine()
     fun transformando(linha:String){
@@ -16,9 +16,12 @@ fun anoParaTudo(){
 
         val meses:Int = 12
         val dias:Int = 365
-        val horas:Int = 8760
-        val minutos:Int = 525600
-        val segundos:Int = 31536000
+        val horas:Int = 365 * 24
+        //val horas:Int = 8760
+        val minutos:Int = horas * 60
+        //val minutos:Int = 525600
+        val segundos:Int = minutos * 60
+        //val segundos:Int = 31536000
 
         println("=======================================================")
         println("$ano ano(s) é equivalente a:")
@@ -44,7 +47,7 @@ fun anoParaTudo(){
 }
 
 //2) Escreva uma função capaz de receber uma string e retornar a quantidade de caracteres.
-fun retornarQuantidadeDeCaracteres(){
+private fun retornarQuantidadeDeCaracteres(){
     print("Por favor, informe uma palavra para retornar o número de caracteres: ")
     var linha = readLine()
     if (linha == null || linha == "") {
@@ -59,7 +62,7 @@ fun retornarQuantidadeDeCaracteres(){
 }
 
 //3) Escreva uma função capaz de calcular o cubo de um número inteiro (cubo = n*n*n).
-fun calculoCubo(){
+private fun calculoCubo(){
     print("Por favor, informe um número a ser calculado (número inteiro, de preferência): ")
     var linha = readLine()
     fun calculo(linha:String){
@@ -80,7 +83,7 @@ fun calculoCubo(){
 }
 
 //4) Escreva uma função capaz de receber milhas e converter em km (1 milha = 1,6km).
-fun milhasParaKm(){
+private fun milhasParaKm(){
     print("Por favor, informe um número a ser calculado para quilômetros: ")
     var linha = readLine()
     fun km(linha:String){
@@ -105,17 +108,17 @@ fun milhasParaKm(){
 //a. Não deve existir lógica dentro da função main. Deve ser usada somente como ponto de entrada. //Ok
 //b. Escrever uma função para a troca de letras e impressão do valor final.
 //c. String final deve estar com todas as letras minúsculas.
-fun trocaString(){
+private fun trocaString(){
     print("Por favor, informe uma palavra para retornar a string divertida: ")
     var linha = readLine()
     fun stringX(linha:String){
-        println("Transformando os 'a's da palavra em x: ${linha.replace("a", "x", true)}")
+        println("Transformando os 'a's da palavra em x: ${linha.replace("a", "x", true).lowercase()}")
     }
     fun stringValor(linha:String){
         println("Quantidade de caracteres: ${linha.length}")
     }
     fun stringMaiusculo(linha:String){
-        println("A palavra em maiúsculo: ${linha.uppercase()}")
+        println("A palavra em minúsculo: ${linha.lowercase()}")
     }
     if (linha == null || linha == "") {
         do {
@@ -141,7 +144,7 @@ fun trocaString(){
 }
 
 //6) Sobre as funções criadas nos exercícios 2, 3 e 4. É possível transformá-las em funções de uma única linha? Se sim, transforme-as.
-fun linhaUnica234(){
+private fun linhaUnica234(){
     //As Funções criadas aqui, estão com tratamento de erro, então não está sendo possível :P
     //Mas qualquer coisa, Erick do futuro:
     //fun teste(a:String, b:String):String = a + b
