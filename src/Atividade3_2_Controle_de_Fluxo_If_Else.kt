@@ -69,14 +69,14 @@ private fun portariav2() {
     if (idade != null && idade != "") {
         if (idade.toInt() >= 18) {
             print("Qual é o seu tipo de convite: ")
-            val tipoConviteRL = readLine()
-            if (tipoConviteRL != null && tipoConviteRL != "") {
-                val tipoConvite = tipoConviteRL.lowercase().trim()
+            var tipoConvite = readLine()
+            if (tipoConvite != null && tipoConvite != "") {
+                tipoConvite = tipoConvite.lowercase().trim()
                 if (tipoConvite == "comum" || tipoConvite == "premium" || tipoConvite == "luxo") {
                     print("Qual é o código de convite: ")
-                    val conviteRL = readLine()
-                    if (conviteRL != null && conviteRL != "") {
-                        val convite = conviteRL.uppercase().trim()
+                    var convite = readLine()
+                    if (convite != null && convite != "") {
+                        convite = convite.uppercase().trim()
                         if ((tipoConvite == "comum" && convite.startsWith("XT"))
                             || (tipoConvite == "premium" || tipoConvite == "luxo") && convite.startsWith("XL")
                         ) {
