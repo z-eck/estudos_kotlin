@@ -1,9 +1,9 @@
 fun main() {
-    //aguaEmBalao() //Atvd1
+    aguaEmBalao() //Atvd1
     //fizzBuzz() //Atvd2
     //invertido() //Atvd3
     //xO() //Atvd4
-    aposentadoria() //Desafio
+    //aposentadoria() //Desafio
 }
 /* 1 Considere uma caixa d’água de 2 mil litros. Rômulo gostaria de encher a caixa d’água com balões de água
 de 7 litros. Quantos balões cabem na caixa d’água sem que o volume seja excedido? */
@@ -19,7 +19,7 @@ private fun aguaEmBalao() {
             println("Você encheu $qntBaloes Balão")
         } else println("Você encheu $qntBaloes Balões!")
 
-        caixaLimite = (caixaLimite - balao)
+        caixaLimite -= balao
     } while (caixaLimite >= balao)
 
     if (qntBaloes == 1){
